@@ -13,7 +13,7 @@ class SortManager(object):
 	def choosePivot(arr, left, right):
 		pivot = left + (right - left) // 2
 		return pivot
-	@staticmethod
+	@staticmethod	
 	def partition(arr,left,right):
 		pivotIndex = SortManager.choosePivot(arr,left,right)		
 		pivotValue = arr[pivotIndex]
@@ -31,6 +31,4 @@ class SortManager(object):
 	def swap(left,right):
 		return right,left
 	
-arr = [2,3,4,6,1,9]
-SortManager.quickSort(arr,0,5)		
-print(arr)
+
