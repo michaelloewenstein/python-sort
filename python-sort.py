@@ -11,12 +11,11 @@ class SortManager(object):
 
 	@staticmethod
 	def choosePivot(arr, left, right):
-		pivot = left + (right - left) / 2
-		return math.floor(pivot)
-
+		pivot = left + (right - left) // 2
+		return pivot
 	@staticmethod
 	def partition(arr,left,right):
-		pivotIndex = SortManager.choosePivot(arr,left,right)
+		pivotIndex = SortManager.choosePivot(arr,left,right)		
 		pivotValue = arr[pivotIndex]
 		arr[pivotIndex], arr[right] = arr[right], arr[pivotIndex]
 		currentIndex = left
